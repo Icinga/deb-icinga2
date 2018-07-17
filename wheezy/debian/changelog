@@ -1,3 +1,9 @@
+icinga2 (2.9.0-1) icinga-wheezy; urgency=medium
+
+  * Update to 2.9.0
+
+ -- Michael Friedrich <michael.friedrich@icinga.com>  Tue, 17 Jul 2018 12:51:45 +0000
+
 icinga2 (2.9.0-0) icinga-wheezy; urgency=medium
 
   * Prepare updating to 2.9.0
