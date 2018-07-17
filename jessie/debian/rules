@@ -2,19 +2,24 @@
 
 #export DH_VERBOSE=1
 
+LTO_BUILD = -DICINGA2_LTO_BUILD=On
+
 DEB_HOST_ARCH = $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
-# disable unity builds for arches with low memory
+# disable unity/lto builds for arches with low memory
 ifneq ($(findstring $(DEB_HOST_ARCH), armhf),)
 	UNITY_BUILD = -DICINGA2_UNITY_BUILD=Off
+	LTO_BUILD = -DICINGA2_LTO_BUILD=Off
 endif
 
 ifneq ($(findstring $(DEB_HOST_ARCH), mips),)
 	UNITY_BUILD = -DICINGA2_UNITY_BUILD=Off
+	LTO_BUILD = -DICINGA2_LTO_BUILD=Off
 endif
 
 ifneq ($(findstring $(DEB_HOST_ARCH), mipsel),)
 	UNITY_BUILD = -DICINGA2_UNITY_BUILD=Off
+	LTO_BUILD = -DICINGA2_LTO_BUILD=Off
 endif
 
 %:
@@ -44,7 +49,8 @@ override_dh_auto_configure:
 		-DICINGA2_GIT_VERSION_INFO=false \
 		-DICINGA2_PLUGINDIR=/usr/lib/nagios/plugins \
 		-DICINGA2_WITH_STUDIO=true \
-		$(UNITY_BUILD)
+		$(UNITY_BUILD) \
+		$(LTO_BUILD)
 
 override_dh_auto_install:
 	dh_auto_install
@@ -58,7 +64,7 @@ override_dh_install-indep:
 
 override_dh_install-arch:
 	dh_install -a
-	rm debian/libicinga2/usr/lib/*/icinga2/libdb_ido_*
+	rm debian/libicinga2/usr/lib/*/icinga2/lib*_shim*
 	for dbms in mysql pgsql; do \
 		mkdir -p debian/icinga2-ido-$$dbms/usr/share/dbconfig-common/data/icinga2-ido-$$dbms/install ; \
 		mkdir -p debian/icinga2-ido-$$dbms/usr/share/dbconfig-common/data/icinga2-ido-$$dbms/upgrade/$$dbms; \
