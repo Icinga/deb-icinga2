@@ -1,3 +1,0 @@
-Tests: version
-Restrictions: needs-root
-Depends: icinga2,icinga2-bin,icinga2-common
