@@ -44,6 +44,7 @@ override_dh_auto_configure:
 		-- \
 		-DCMAKE_INSTALL_LOCALSTATEDIR=/var \
 		-DCMAKE_INSTALL_SYSCONFDIR=/etc \
+		-DICINGA2_SYSCONFIGFILE=/etc/default/icinga2 \
 		-DICINGA2_RUNDIR=/run \
 		-DICINGA2_USER=nagios \
 		-DICINGA2_GROUP=nagios \
@@ -51,6 +52,7 @@ override_dh_auto_configure:
 		-DICINGA2_GIT_VERSION_INFO=false \
 		-DICINGA2_PLUGINDIR=/usr/lib/nagios/plugins \
 		-DICINGA2_WITH_STUDIO=true \
+		-DUSE_SYSTEMD=ON \
 		$(UNITY_BUILD) \
 		$(LTO_BUILD)
 
