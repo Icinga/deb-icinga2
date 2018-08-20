@@ -51,7 +51,6 @@ override_dh_auto_configure:
 		-DICINGA2_COMMAND_GROUP=www-data \
 		-DICINGA2_GIT_VERSION_INFO=false \
 		-DICINGA2_PLUGINDIR=/usr/lib/nagios/plugins \
-		-DICINGA2_WITH_STUDIO=true \
 		-DUSE_SYSTEMD=ON \
 		$(UNITY_BUILD) \
 		$(LTO_BUILD)
@@ -68,7 +67,6 @@ override_dh_install-indep:
 
 override_dh_install-arch:
 	dh_install -a
-	rm debian/libicinga2/usr/lib/*/icinga2/lib*_shim*
 	for dbms in mysql pgsql; do \
 		mkdir -p debian/icinga2-ido-$$dbms/usr/share/dbconfig-common/data/icinga2-ido-$$dbms/install ; \
 		mkdir -p debian/icinga2-ido-$$dbms/usr/share/dbconfig-common/data/icinga2-ido-$$dbms/upgrade/$$dbms; \

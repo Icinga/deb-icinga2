@@ -93,9 +93,10 @@ Package: icinga2-bin
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: icinga2-common (= ${source:Version}),
-         libicinga2 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: libicinga2 (<< 2.9.0)
+Replaces: libicinga2 (<< 2.9.0)
 Description: host and network monitoring system - daemon
  Icinga 2 is a general-purpose monitoring application to fit the needs of
  any size of network. Icinga 1.x was a Nagios fork; this new generation
@@ -232,7 +233,6 @@ Package: icinga2-dbg
 Architecture: any
 Section: debug
 Depends: icinga2-bin (= ${binary:Version}),
-         libicinga2 (= ${binary:Version}),
          ${misc:Depends}
 Description: host and network monitoring system - debug symbols
  Icinga 2 is a general-purpose monitoring application to fit the needs of
@@ -252,32 +252,6 @@ Description: host and network monitoring system - debug symbols
   * native support for Livestatus and Graphite.
  .
  This package provides debug symbols for Icinga 2.
-
-Package: libicinga2
-Architecture: any
-Section: libs
-Breaks: icinga2-bin (<< 2.4.0-1~)
-Replaces: icinga2-bin (<< 2.4.0-1~)
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
-Description: host and network monitoring system - internal libraries
- Icinga 2 is a general-purpose monitoring application to fit the needs of
- any size of network. Icinga 1.x was a Nagios fork; this new generation
- has been rewritten from scratch in C++, with multi-threading and cluster
- support.
- .
- Features:
-  * all standard features of Icinga and Nagios;
-  * much faster and more scalable than Icinga 1 and Nagios;
-  * new, more intuitive, template-based configuration format;
-  * monitoring services on ICMP (ping) or TCP ports (HTTP, NNTP, POP3,
-    SMTP, etc.) by executing checks (see monitoring-plugins*);
-  * any small script following the Nagios plugin API can be used as a
-    check plugin;
-  * notifications about alerts for any custom script (with examples);
-  * native support for Livestatus and Graphite.
- .
- This package provides internal libraries for the daemon.
 
 Package: vim-icinga2
 Architecture: all
