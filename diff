@@ -6,7 +6,7 @@ cd "$(readlink -f "$(dirname "$0")")"
 
 target="${1%/}"
 branch="$target"
-debian_git=https://anonscm.debian.org/git/pkg-nagios/pkg-icinga2.git
+debian_git=https://salsa.debian.org/nagios-team/pkg-icinga2.git
 
 case "$target" in
   jessie|wheezy)
@@ -42,8 +42,8 @@ echo "# Branch: $branch"
 echo "#"
 
 # check version
-version_here=`dpkg-parsechangelog -S Version -l "$target"/debian/changelog`
-version_debian=`dpkg-parsechangelog -S Version -l .debian_packaging/debian/changelog`
+version_here=$(dpkg-parsechangelog -S Version -l "$target"/debian/changelog)
+version_debian=$(dpkg-parsechangelog -S Version -l .debian_packaging/debian/changelog)
 
 if dpkg --compare-versions "$version_debian" gt "$version_here"
 then
@@ -57,4 +57,4 @@ echo "# You can update the version with the following command:"
 echo "#  dch --changelog $target/debian/changelog --newversion '$version_debian' --distribution 'icinga-$target'"
 echo "#"
 
-diff -Naur -x "changelog" "$target"/debian/ .debian_packaging/debian/
+diff --color=auto -Naur -x "changelog" "$target"/debian/ .debian_packaging/debian/

@@ -4,6 +4,7 @@
 
 ## Snapshot Artifacts
 /*.git/
+/.debian_packaging/
 
 ## Editors
 *~
