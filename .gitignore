@@ -1,1 +1,10 @@
-/.debian_packaging/
+## Build
+/build/
+/ccache/
+
+## Snapshot Artifacts
+/*.git/
+
+## Editors
+*~
+.*.sw[op]
