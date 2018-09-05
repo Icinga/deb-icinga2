@@ -168,7 +168,6 @@ Description: host and network monitoring system - classic UI
 Package: icinga2-ido-mysql
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
-Conflicts: icinga2-ido-pgsql
 Depends: dbconfig-common,
          icinga2-bin (= ${binary:Version}),
          icinga2-common (= ${source:Version}),
@@ -198,7 +197,6 @@ Description: host and network monitoring system - MySQL support
 
 Package: icinga2-ido-pgsql
 Architecture: any
-Conflicts: icinga2-ido-mysql
 Pre-Depends: ${misc:Pre-Depends}
 Depends: dbconfig-common,
          icinga2-bin (= ${binary:Version}),
