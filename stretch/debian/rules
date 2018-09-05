@@ -85,6 +85,6 @@ override_dh_strip:
 
 # we don't build shared libraries
 override_dh_makeshlibs:
-	dh_makeshlibs --no-scripts
+	dh_makeshlibs --no-scripts || dh_makeshlibs --noscripts
 
 # vi: noexpandtab ts=4 sw=4 :
