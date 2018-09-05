@@ -135,34 +135,6 @@ Description: host and network monitoring system - documentation
  .
  This package provides the Icinga 2 documentation.
 
-Package: icinga2-classicui
-Architecture: all
-Pre-Depends: dpkg (>= 1.15.7.2)
-Depends: apache2-utils,
-         icinga-cgi-bin (>= 1.11.5~),
-         icinga2-bin (>= 2.2.0~),
-         icinga2-common (= ${source:Version}),
-         ${misc:Depends}
-Recommends: apache2 | httpd
-Description: host and network monitoring system - classic UI
- Icinga 2 is a general-purpose monitoring application to fit the needs of
- any size of network. Icinga 1.x was a Nagios fork; this new generation
- has been rewritten from scratch in C++, with multi-threading and cluster
- support.
- .
- Features:
-  * all standard features of Icinga and Nagios;
-  * much faster and more scalable than Icinga 1 and Nagios;
-  * new, more intuitive, template-based configuration format;
-  * monitoring services on ICMP (ping) or TCP ports (HTTP, NNTP, POP3,
-    SMTP, etc.) by executing checks (see monitoring-plugins*);
-  * any small script following the Nagios plugin API can be used as a
-    check plugin;
-  * notifications about alerts for any custom script (with examples);
-  * native support for Livestatus and Graphite.
- .
- This package provides support for the Icinga Classic User Interface.
-
 Package: icinga2-ido-mysql
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}

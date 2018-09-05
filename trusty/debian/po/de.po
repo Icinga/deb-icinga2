@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: icinga2 2.0.1-2\n"
 "Report-Msgid-Bugs-To: icinga2@packages.debian.org\n"
-"POT-Creation-Date: 2014-08-18 15:18+0200\n"
+"POT-Creation-Date: 2018-09-05 19:10+0200\n"
 "PO-Revision-Date: 2014-08-21 11:21+0100\n"
 "Last-Translator: Chris Leick <c.leick@vollbio.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -15,64 +15,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid "Icinga 2 ClassicUI administration password:"
-msgstr "Administrationspasswort der ClassicUI von Icinga 2:"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid ""
-"Please provide the password to be created with the \"icingaadmin\" user."
-msgstr ""
-"Bitte geben Sie das Passwort an, das für den Benutzer »icingaadmin« angelegt "
-"werden soll."
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid ""
-"This is the username and password to use when connecting to the Icinga "
-"server after completing the configuration. If you do not provide a password, "
-"you will have to configure access to Icinga manually later on."
-msgstr ""
-"Dies sind der Benutzername und das Passwort, die nach Abschluss der "
-"Konfiguration zum Verbinden mit dem Icinga-Server verwendet werden. Falls "
-"Sie kein Passwort angeben, müssen Sie den Zugriff auf Icinga später manuell "
-"einrichten."
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:3001
-msgid "Re-enter password to verify:"
-msgstr "Geben Sie dass Passwort zu Kontrolle erneut ein:"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:3001
-msgid ""
-"Please enter the same user password again to verify you have typed it "
-"correctly."
-msgstr ""
-"Bitte geben Sie dasselbe Passwort erneut ein, um zu prüfen, ob Sie es "
-"korrekt eingetippt haben."
-
-#. Type: error
-#. Description
-#: ../icinga2-classicui.templates:4001
-msgid "Password input error"
-msgstr "Passworteingabefehler"
-
-#. Type: error
-#. Description
-#: ../icinga2-classicui.templates:4001
-msgid "The two passwords you entered were not the same. Please try again."
-msgstr ""
-"Die beiden von Ihnen eingegebenen Passwörter sind nicht gleich. Bitte "
-"versuchen Sie es erneut."
 
 #. Type: boolean
 #. Description
@@ -117,3 +59,40 @@ msgid ""
 msgstr ""
 "Sie können diese Funktionalität später mit dem Befehl »icinga2-disable-"
 "feature ido-pgsql« deaktivieren."
+
+#~ msgid "Icinga 2 ClassicUI administration password:"
+#~ msgstr "Administrationspasswort der ClassicUI von Icinga 2:"
+
+#~ msgid ""
+#~ "Please provide the password to be created with the \"icingaadmin\" user."
+#~ msgstr ""
+#~ "Bitte geben Sie das Passwort an, das für den Benutzer »icingaadmin« "
+#~ "angelegt werden soll."
+
+#~ msgid ""
+#~ "This is the username and password to use when connecting to the Icinga "
+#~ "server after completing the configuration. If you do not provide a "
+#~ "password, you will have to configure access to Icinga manually later on."
+#~ msgstr ""
+#~ "Dies sind der Benutzername und das Passwort, die nach Abschluss der "
+#~ "Konfiguration zum Verbinden mit dem Icinga-Server verwendet werden. Falls "
+#~ "Sie kein Passwort angeben, müssen Sie den Zugriff auf Icinga später "
+#~ "manuell einrichten."
+
+#~ msgid "Re-enter password to verify:"
+#~ msgstr "Geben Sie dass Passwort zu Kontrolle erneut ein:"
+
+#~ msgid ""
+#~ "Please enter the same user password again to verify you have typed it "
+#~ "correctly."
+#~ msgstr ""
+#~ "Bitte geben Sie dasselbe Passwort erneut ein, um zu prüfen, ob Sie es "
+#~ "korrekt eingetippt haben."
+
+#~ msgid "Password input error"
+#~ msgstr "Passworteingabefehler"
+
+#~ msgid "The two passwords you entered were not the same. Please try again."
+#~ msgstr ""
+#~ "Die beiden von Ihnen eingegebenen Passwörter sind nicht gleich. Bitte "
+#~ "versuchen Sie es erneut."

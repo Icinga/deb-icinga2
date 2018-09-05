@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: icinga2\n"
 "Report-Msgid-Bugs-To: icinga2@packages.debian.org\n"
-"POT-Creation-Date: 2014-08-18 15:18+0200\n"
+"POT-Creation-Date: 2018-09-05 19:10+0200\n"
 "PO-Revision-Date: 2014-09-03 12:37+0200\n"
 "Last-Translator: Mert Dirik <mertdirik@gmail.com>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -16,59 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid "Icinga 2 ClassicUI administration password:"
-msgstr "Icinga 2 ClassicUI yönetim parolası:"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid ""
-"Please provide the password to be created with the \"icingaadmin\" user."
-msgstr ""
-"Lütfen yeni oluşturulacak olan \"icingaadmin\" kullanıcısının kullanacağı "
-"parolayı girin."
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:2001
-msgid ""
-"This is the username and password to use when connecting to the Icinga "
-"server after completing the configuration. If you do not provide a password, "
-"you will have to configure access to Icinga manually later on."
-msgstr ""
-"Bu kullanıcı adı ve parola, yapılandırılması tamamlandıktan sonra Icinga "
-"sunucusuna bağlanmak için kullanılacaktır. Eğer şimdi bir parola girmezseniz "
-"Icinga'yı daha sonra elle yapılandırmanız gerekecektir."
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:3001
-msgid "Re-enter password to verify:"
-msgstr "Parolayı doğrulamak için tekrar girin:"
-
-#. Type: password
-#. Description
-#: ../icinga2-classicui.templates:3001
-msgid ""
-"Please enter the same user password again to verify you have typed it "
-"correctly."
-msgstr "Lütfen doğru yazıldığından emin olmak için aynı parolayı tekrar girin."
-
-#. Type: error
-#. Description
-#: ../icinga2-classicui.templates:4001
-msgid "Password input error"
-msgstr "Parola girme hatası"
-
-#. Type: error
-#. Description
-#: ../icinga2-classicui.templates:4001
-msgid "The two passwords you entered were not the same. Please try again."
-msgstr "Girdiğiniz iki parola aynı değil. Lütfen tekrar deneyin."
 
 #. Type: boolean
 #. Description
@@ -113,3 +60,36 @@ msgid ""
 msgstr ""
 "Bu özelliği daha sonra \"icinga2 feature disable ido-pgsql\" komutu ile "
 "kapatabilirsiniz."
+
+#~ msgid "Icinga 2 ClassicUI administration password:"
+#~ msgstr "Icinga 2 ClassicUI yönetim parolası:"
+
+#~ msgid ""
+#~ "Please provide the password to be created with the \"icingaadmin\" user."
+#~ msgstr ""
+#~ "Lütfen yeni oluşturulacak olan \"icingaadmin\" kullanıcısının kullanacağı "
+#~ "parolayı girin."
+
+#~ msgid ""
+#~ "This is the username and password to use when connecting to the Icinga "
+#~ "server after completing the configuration. If you do not provide a "
+#~ "password, you will have to configure access to Icinga manually later on."
+#~ msgstr ""
+#~ "Bu kullanıcı adı ve parola, yapılandırılması tamamlandıktan sonra Icinga "
+#~ "sunucusuna bağlanmak için kullanılacaktır. Eğer şimdi bir parola "
+#~ "girmezseniz Icinga'yı daha sonra elle yapılandırmanız gerekecektir."
+
+#~ msgid "Re-enter password to verify:"
+#~ msgstr "Parolayı doğrulamak için tekrar girin:"
+
+#~ msgid ""
+#~ "Please enter the same user password again to verify you have typed it "
+#~ "correctly."
+#~ msgstr ""
+#~ "Lütfen doğru yazıldığından emin olmak için aynı parolayı tekrar girin."
+
+#~ msgid "Password input error"
+#~ msgstr "Parola girme hatası"
+
+#~ msgid "The two passwords you entered were not the same. Please try again."
+#~ msgstr "Girdiğiniz iki parola aynı değil. Lütfen tekrar deneyin."
