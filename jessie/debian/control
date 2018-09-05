@@ -90,8 +90,8 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: icinga2-common (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: libicinga2 (<< 2.9.0)
-Replaces: libicinga2 (<< 2.9.0)
+Breaks: libicinga2
+Replaces: libicinga2
 Description: host and network monitoring system - daemon
  Icinga 2 is a general-purpose monitoring application to fit the needs of
  any size of network. Icinga 1.x was a Nagios fork; this new generation
