@@ -1,0 +1,12 @@
+icinga2 (2.10.0-1) icinga-stretch; urgency=medium
+
+  The ClassicUI package for Icinga 2 has been deprecated in 2.8.0
+
+  With 2.10.0-1 the package also have been removed with the Debian packages.
+
+  If you want to keep using the Classic UI feel free to do so by keeping the
+  config files manually.
+
+  Also see /usr/share/doc/icinga2/CHANGELOG.md.gz
+
+ -- Markus Frosch <lazyfrosch@debian.org>  Wed, 05 Sep 2018 19:14:24 +0200
