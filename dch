@@ -2,7 +2,7 @@
 
 set -e
 
-DIST=(wheezy jessie stretch ubuntu)
+DIST=(wheezy jessie stretch trusty)
 VERSION="$1"
 shift
 CHANGELOG="$@"
