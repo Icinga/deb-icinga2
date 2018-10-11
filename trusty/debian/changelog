@@ -1,21 +1,38 @@
-icinga2 (2.9.1-1) icinga-stretch; urgency=medium
+icinga2 (2.9.2-1) icinga-ubuntu; urgency=medium
+
+  * Update to 2.9.2
+
+ -- Michael Friedrich <michael.friedrich@icinga.com>  Wed, 26 Sep 2018 09:04:36 +0000
+
+icinga2 (2.9.1-1) icinga-ubuntu; urgency=medium
 
   * Update to 2.9.1
 
  -- Michael Friedrich <michael.friedrich@icinga.com>  Tue, 24 Jul 2018 09:38:59 +0000
 
-icinga2 (2.9.0-1) icinga-stretch; urgency=medium
+icinga2 (2.9.0-1) icinga-ubuntu; urgency=medium
 
   * Update to 2.9.0
 
  -- Michael Friedrich <michael.friedrich@icinga.com>  Tue, 17 Jul 2018 12:51:46 +0000
 
-icinga2 (2.9.0-0) icinga-stretch; urgency=medium
+icinga2 (2.8.4-1) icinga-ubuntu; urgency=medium
 
-  * Prepare updating to 2.9.0
-  * Remove icinga2-studio package
+  * Update to 2.8.4
 
- -- Markus Frosch <markus.frosch@icinga.com>  Tue, 06 Feb 2018 15:19:46 +0100
+ -- Jean Flach <jean-marcel.flach@netways.de>  Wed, 25 Apr 2018 15:02:06 +0200
+
+icinga2 (2.8.3-1) icinga-ubuntu; urgency=medium
+
+  * Update to 2.8.3
+
+ -- Jean Flach <jean-marcel.flach@netways.de>  Tue, 24 Apr 2018 14:19:00 +0200
+
+icinga2 (2.8.2-1) icinga-ubuntu; urgency=medium
+
+  * Update to 2.8.2
+
+ -- Jean Flach <jean-marcel.flach@netways.de>  Thu, 22 Mar 2018 11:35:42 +0100
 
 icinga2 (2.8.1-1) icinga-stretch; urgency=medium
 
