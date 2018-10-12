@@ -5,3 +5,4 @@ tools/syntax/nano/icinga2.nanorc usr/share/nano
 usr/share/icinga2
 usr/lib/icinga2/prepare-dirs
 usr/lib/icinga2/safe-reload
+usr/lib/systemd/system/icinga2.service lib/systemd/system

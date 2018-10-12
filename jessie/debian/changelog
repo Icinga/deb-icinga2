@@ -1,3 +1,9 @@
+icinga2 (2.10.0-2) icinga-jessie; urgency=medium
+
+  * Merge systemd changes for 2.10.0
+
+ -- Markus Frosch <markus.frosch@icinga.com>  Fri, 12 Oct 2018 10:14:06 +0200
+
 icinga2 (2.10.0-1) icinga-jessie; urgency=medium
 
   * Update to 2.10.0
