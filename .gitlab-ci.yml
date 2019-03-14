@@ -1,0 +1,81 @@
+stages:
+  - build
+  - test
+  - upload
+
+variables:
+  DOCKER_IMAGE_BASE: registry.icinga.com/build-docker
+  ICINGA_BUILD_TYPE: snapshot
+  ICINGA_BUILD_UPSTREAM_BRANCH: feature/boost-asio
+
+.build: &build
+  stage: build
+  tags:
+    - docker
+  image: ${DOCKER_IMAGE_BASE}/${DOCKER_IMAGE}
+  script:
+    - icinga-build-package
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - ccache/
+      - 'icinga2.git'
+  artifacts:
+    paths:
+      - build/*
+    expire_in: 1 week
+
+.test: &test
+  stage: test
+  tags:
+    - docker
+  image: ${DOCKER_IMAGE_BASE}/${DOCKER_IMAGE}
+  script:
+    - find build/
+    - icinga-build-test
+
+.upload: &upload
+  stage: upload
+  tags:
+    - docker
+  image: ${DOCKER_IMAGE_BASE}/upload
+  script:
+    - find build/
+    - icinga-build-upload-aptly
+  only:
+    - tags
+
+###################################
+# Debian
+###################################
+build/debian/stretch:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: debian/stretch
+
+test/debian/stretch:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: debian/stretch
+  dependencies:
+    - build/debian/stretch
+
+build/debian/stretch:x86:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: debian/stretch:x86
+
+test/debian/stretch:x86:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: debian/stretch:x86
+  dependencies:
+    - build/debian/stretch
+    - build/debian/stretch:x86
+
+upload/debian/stretch:
+  <<: *upload
+  dependencies:
+    - build/debian/stretch:x86
+    - build/debian/stretch
+
