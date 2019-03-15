@@ -6,6 +6,15 @@ LTO_BUILD = -DICINGA2_LTO_BUILD=On
 
 DEB_HOST_ARCH = $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
+ifneq (,$(wildcard /usr/include/icinga-boost))
+BOOST_FLAGS = \
+  -DBoost_NO_BOOST_CMAKE=TRUE \
+  -DBoost_NO_SYSTEM_PATHS=TRUE \
+  -DBOOST_LIBRARYDIR=/usr/lib/$(DEB_HOST_MULTIARCH)/icinga-boost \
+  -DBOOST_INCLUDEDIR=/usr/include/icinga-boost \
+	-DCMAKE_INSTALL_RPATH=/usr/lib/$(DEB_HOST_MULTIARCH)/icinga-boost
+endif
+
 # disable unity/lto builds for arches with low memory
 ifneq ($(findstring $(DEB_HOST_ARCH), armhf),)
 	UNITY_BUILD = -DICINGA2_UNITY_BUILD=Off
@@ -49,6 +58,7 @@ override_dh_auto_configure:
 		-DICINGA2_COMMAND_GROUP=www-data \
 		-DICINGA2_GIT_VERSION_INFO=false \
 		-DICINGA2_PLUGINDIR=/usr/lib/nagios/plugins \
+		$(BOOST_FLAGS) \
 		$(UNITY_BUILD) \
 		$(LTO_BUILD)
 
