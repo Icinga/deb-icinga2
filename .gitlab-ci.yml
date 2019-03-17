@@ -116,6 +116,7 @@ upload/debian/jessie:
 build/ubuntu/bionic:
   <<: *build
   variables:
+    ICINGA_BUILD_DEB_FLAVOR: stretch
     DOCKER_IMAGE: ubuntu/bionic
 
 test/ubuntu/bionic:
@@ -128,6 +129,7 @@ test/ubuntu/bionic:
 build/ubuntu/bionic:x86:
   <<: *build
   variables:
+    ICINGA_BUILD_DEB_FLAVOR: stretch
     DOCKER_IMAGE: ubuntu/bionic:x86
 
 test/ubuntu/bionic:x86:
@@ -147,6 +149,7 @@ upload/ubuntu/bionic:
 build/ubuntu/xenial:
   <<: *build
   variables:
+    ICINGA_BUILD_DEB_FLAVOR: stretch
     DOCKER_IMAGE: ubuntu/xenial
 
 test/ubuntu/xenial:
@@ -159,6 +162,7 @@ test/ubuntu/xenial:
 build/ubuntu/xenial:x86:
   <<: *build
   variables:
+    ICINGA_BUILD_DEB_FLAVOR: stretch
     DOCKER_IMAGE: ubuntu/xenial:x86
 
 test/ubuntu/xenial:x86:
