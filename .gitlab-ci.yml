@@ -70,8 +70,8 @@ test/debian/stretch:x86:
   variables:
     DOCKER_IMAGE: debian/stretch:x86
   dependencies:
-    - build/debian/stretch
     - build/debian/stretch:x86
+    - build/debian/stretch
 
 upload/debian/stretch:
   <<: *upload
@@ -79,3 +79,129 @@ upload/debian/stretch:
     - build/debian/stretch:x86
     - build/debian/stretch
 
+build/debian/jessie:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: debian/jessie
+
+test/debian/jessie:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: debian/jessie
+  dependencies:
+    - build/debian/jessie
+
+build/debian/jessie:x86:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: debian/jessie:x86
+
+test/debian/jessie:x86:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: debian/jessie:x86
+  dependencies:
+    - build/debian/jessie:x86
+    - build/debian/jessie
+
+upload/debian/jessie:
+  <<: *upload
+  dependencies:
+    - build/debian/jessie:x86
+    - build/debian/jessie
+
+###################################
+# Ubuntu
+###################################
+build/ubuntu/bionic:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/bionic
+
+test/ubuntu/bionic:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/bionic
+  dependencies:
+    - build/ubuntu/bionic
+
+build/ubuntu/bionic:x86:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/bionic:x86
+
+test/ubuntu/bionic:x86:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/bionic:x86
+  dependencies:
+    - build/ubuntu/bionic:x86
+    - build/ubuntu/bionic
+
+upload/ubuntu/bionic:
+  <<: *upload
+  dependencies:
+    - build/ubuntu/bionic:x86
+    - build/ubuntu/bionic
+
+build/ubuntu/xenial:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/xenial
+
+test/ubuntu/xenial:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/xenial
+  dependencies:
+    - build/ubuntu/xenial
+
+build/ubuntu/xenial:x86:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/xenial:x86
+
+test/ubuntu/xenial:x86:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/xenial:x86
+  dependencies:
+    - build/ubuntu/xenial:x86
+    - build/ubuntu/xenial
+
+upload/ubuntu/xenial:
+  <<: *upload
+  dependencies:
+    - build/ubuntu/xenial:x86
+    - build/ubuntu/xenial
+
+build/ubuntu/trusty:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/trusty
+
+test/ubuntu/trusty:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/trusty
+  dependencies:
+    - build/ubuntu/trusty
+
+build/ubuntu/trusty:x86:
+  <<: *build
+  variables:
+    DOCKER_IMAGE: ubuntu/trusty:x86
+
+test/ubuntu/trusty:x86:
+  <<: *test
+  variables:
+    DOCKER_IMAGE: ubuntu/trusty:x86
+  dependencies:
+    - build/ubuntu/trusty:x86
+    - build/ubuntu/trusty
+
+upload/ubuntu/trusty:
+  <<: *upload
+  dependencies:
+    - build/ubuntu/trusty:x86
+    - build/ubuntu/trusty
