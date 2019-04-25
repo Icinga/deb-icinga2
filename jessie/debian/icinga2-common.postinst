@@ -4,6 +4,11 @@
 set -e
 
 setperm() {
+    ownopt=
+    if [ "$1" = -R ]; then
+        ownopt="-R"
+        shift
+    fi
     user="$1"
     group="$2"
     mode="$3"
@@ -11,7 +16,7 @@ setperm() {
     shift 4
     # only do something when no setting exists
     if ! dpkg-statoverride --list "$file" >/dev/null 2>&1; then
-      chown "$user":"$group" "$file"
+      chown $ownopt "$user":"$group" "$file"
       chmod "$mode" "$file"
     fi
 }
@@ -37,8 +42,17 @@ case "$1" in
 
         # explicitly set permissions on some files that are dependent
         # on the uid/gid of the nagios user, which is dynamically created.
-        setperm nagios nagios 0750 /etc/icinga2
-        setperm nagios nagios 0700 /etc/icinga2/pki
+        if ! dpkg-statoverride --list /etc/icinga2; then
+            setperm nagios nagios 0750 /etc/icinga2
+            setperm nagios nagios 0640 /etc/icinga2/icinga2.conf
+            setperm nagios nagios 0640 /etc/icinga2/constants.conf
+            setperm nagios nagios 0640 /etc/icinga2/zones.conf
+            setperm -R nagios nagios 0700 /etc/icinga2/pki
+            setperm -R nagios nagios 0750 /etc/icinga2/conf.d
+            setperm -R nagios nagios 0750 /etc/icinga2/features-enabled
+            setperm -R nagios nagios 0750 /etc/icinga2/features-available
+            setperm nagios nagios 0750 /etc/icinga2/zones.d
+        fi
 
         setperm nagios adm 2751 /var/log/icinga2
         setperm nagios adm 2751 /var/log/icinga2/compat
