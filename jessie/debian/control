@@ -15,6 +15,7 @@ Build-Depends:
   libboost-dev (>= 1.66) | libboost1.67-dev | libboost1.67-icinga-dev,
   libboost-context-dev (>= 1.66) | libboost-context1.67-dev | libboost-context1.67-icinga-dev,
   libboost-coroutine-dev (>= 1.66) | libboost-coroutine1.67-dev | libboost-coroutine1.67-icinga-dev,
+  libboost-filesystem-dev (>= 1.66) | libboost-filesystem1.67-dev | libboost-filesystem1.67-icinga-dev,
   libboost-program-options-dev (>= 1.66) | libboost-program-options1.67-dev | libboost-program-options1.67-icinga-dev,
   libboost-regex-dev (>= 1.66) | libboost-regex1.67-dev | libboost-regex1.67-icinga-dev,
   libboost-system-dev (>= 1.66) | libboost-system1.67-dev | libboost-system1.67-icinga-dev,
