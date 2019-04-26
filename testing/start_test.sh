@@ -12,8 +12,16 @@ sudo su -c 'echo "deb [trusted=yes] file:$(pwd)/ ./" >>  /etc/apt/sources.list'
 
 sudo apt-get update
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get install --allow-unauthenticated -y icinga2 icinga2-ido-mysql mysql-server
+sudo bash -xe <<ROOTSHELL
+    export DEBIAN_FRONTEND=noninteractive
 
-sudo icinga2 feature list
+    if ! apt-get install -y default-mysql-server; then
+        # Fallback to non-metapackage on older distributions
+        apt-get install -y mysql-server
+    fi
 
-sudo icinga2 daemon -C
+    apt-get install --allow-unauthenticated -y icinga2 icinga2-ido-mysql
+
+    icinga2 feature list
+    icinga2 daemon -C
+ROOTSHELL
