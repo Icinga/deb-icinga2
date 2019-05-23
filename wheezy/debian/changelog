@@ -1,3 +1,9 @@
+icinga2 (2.10.5-1) icinga-wheezy; urgency=medium
+
+  * Update to 2.10.5
+
+ -- Michael Friedrich <michael.friedrich@icinga.com>  Thu, 23 May 2019 12:03:49 +0000
+
 icinga2 (2.10.4-1) icinga-wheezy; urgency=medium
 
   * Release 2.10.4
